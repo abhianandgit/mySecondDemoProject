@@ -1,0 +1,99 @@
+<apex:page renderAs="pdf" >
+ <head>
+ <style>
+ </style>
+ </head> 
+         
+        
+        
+        <apex:form >
+        <body>
+        
+            <table align="center" width="95%"  >
+              <tr >
+                  <td>
+                     <h2><b>Vidya Memorial Clinic</b></h2>
+                     <p>11, DDA Flats market, Below Central <br/>
+                     bank of India, New Delhi
+                     </p>
+                  </td>
+                  <td>
+                     <h3><b>Dr. Ashish Dixit</b></h3>
+                     <p>MBBS, MD</p>
+                     
+  
+                  </td>
+                  
+              </tr>
+              <tr>
+              <td colspan="2">
+              <hr/></td>
+              </tr>
+              <tr>
+                  <td>
+                      <b>Name :</b>Zaina Usman<br/>
+                      <b>Age/Sex :</b>26y / F <br/>
+                      <b>ID:</b>Zaina Usman <br/>
+                      <b>Height:</b>Zaina Usman <br/>
+                      <b>Weight:</b>Zaina Usman<br/>
+                  </td>
+                  <td>
+                      <b>Date :</b>Zaina Usman <br/>
+                      <b>Mobile :</b>Zaina Usman <br/>
+                      <b>BMI :</b>Zaina Usman <br/>
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      <p><b>Symptoms :</b>Temperature normal, Chesty Cough(2 days)</p> 
+                  </td>
+                  
+              </tr>
+              <tr>
+                  <td>
+                      <b>Findings:</b><br/>Systemic Exam : Normal<br/>Pulse 100/mt<br/>Hydration fair<br/>Well baby
+                  </td>
+                  <td>
+                      
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                     <p> <b>Diagnosis:</b>Allergic Cough</p>
+                  </td>
+                  <td>
+                     
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                     <b>Vaccinations due:</b><br/>1. March 29 2019
+                  </td>
+                  <td>
+                     
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                      <p><b>Medicines:</b></p>
+                      1. <b>Nebulizer Levolin 500</b><br/> X SoS<br/>
+                      2. <b>March 29 2019</b><br/> X SoS<br/>
+                      3. <b>March 29 2019</b><br/> X SoS
+                  </td>
+                  <td>
+                     
+                  </td>
+              </tr>
+              <tr>
+                  <td>
+                     <h3><b>Dr. Ashish Dixit</b></h3>
+                     <p style="color:red;">Not valid for medicolegal purposes</p>
+                  </td>
+                  <td>
+                     
+                  </td>
+              </tr>
+           </table>
+       </body>
+       </apex:form> 
+</apex:page>

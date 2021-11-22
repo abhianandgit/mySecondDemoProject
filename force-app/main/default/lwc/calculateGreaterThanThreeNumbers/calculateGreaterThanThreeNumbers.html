@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title='Find greater of three numbers'>
+        <lightning-input name = 'Number1' label='Enter 1St No.' onchange = {handleChange} value = {Num1}></lightning-input>
+        <lightning-input name = 'Number2' label='Enter 2nd No.' onchange = {handleChange} value = {Num2}></lightning-input>
+        <lightning-input name = 'Number3' label='Enter 3rd No.' onchange = {handleChange} value = {Num3}></lightning-input>
+        <lightning-button label ='Calculate' onclick = {Calculate}></lightning-button> 
+        <lightning-button label ='Clear' onclick = {Clear}></lightning-button>
+    </lightning-card>
+    
+</template>

@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title='Simple Interest Calculator'>
+        <lightning-input label='Enter Amount' onchange= {takeAmount}></lightning-input>
+        <lightning-input label='Enter Term' onchange= {takeTerm}></lightning-input>
+        <lightning-input label='Enter Rate' onchange= {takeRate}></lightning-input>
+        <!--lightning-output-field label ='Interest accumulated'></lightning-output-field>
+        <lightning-output-field label ='Total Amount'></lightning-output-field-->
+        <lightning-button label='Calculate' onclick={CalculateInterestAndAmount}></lightning-button>
+        <lightning-button label='Clear' onclick={Clear}></lightning-button>
+
+    </lightning-card>
+    
+</template>

@@ -1,0 +1,22 @@
+<apex:page controller="accountSearchPageController" >
+  <apex:sectionHeader title="AccountSearchPage"/>
+  <apex:form >
+  <apex:pageBlock title="Account Search">
+  <apex:pageBlockSection title="search Account by Character" columns="2">
+  <apex:inputText label="Enter the starting character of Account" html-placeholder="enter character" value="{!accountCharSearch}"/>
+  <apex:commandButton value="Search Account" action="{!accList}" reRender="ref"/>
+  </apex:pageBlockSection>
+  </apex:pageBlock>
+  <apex:pageBlock title="Searched Account Results,total no = {!lstacct.size}" id="ref" >
+  <apex:pageBlockTable value="{!lstacct}" var="acc">
+  <apex:column headerValue="Account Name ">
+  <apex:outputlink value="/{!acc.Id}" target="_blank">{!acc.Name}</apex:outputlink>
+  </apex:column>
+  <!--<apex:column value="{!acc.Name}"/> -->
+  <apex:column value="{!acc.id}"/>
+  <apex:column value="{!acc.Phone}"/>
+  </apex:pageBlockTable>
+  
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

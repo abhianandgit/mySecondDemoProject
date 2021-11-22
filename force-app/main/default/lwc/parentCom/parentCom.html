@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title ="Getting data from child">
+        <p class= "slds-p-horizontal_small">
+            <lightning-progress-bar
+                value = {passValuetoParent}
+                size="large"
+                ></lightning-progress-bar>
+                <c-child-com 
+                oncallpassvaluechildtoparent = {passToParent}
+                >
+                </c-child-com>
+        </p>
+    </lightning-card>
+</template>

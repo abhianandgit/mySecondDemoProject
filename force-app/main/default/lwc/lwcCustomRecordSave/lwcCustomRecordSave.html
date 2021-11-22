@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title ='Create Student Record'>
+        <div class = "slds-wrap slds-grid">
+            <div class="slds-col slds-size_6-of-12" >
+                <lightning-input name ='StuName' type='text' value ={StuName} label='Student Name' onchange={handleOnChange}></lightning-input>
+            </div>
+            <div class="slds-col slds-size_6-of-12"> 
+                <lightning-input name ='StuEmail' value ={StuEmail} label='Email' onchange={handleOnChange}></lightning-input>
+            </div>
+            <div class="slds-col slds-size_6-of-12">
+                <lightning-input name ='StuPhone' value ={StuPhone} label='Phone' onchange={handleOnChange}></lightning-input>
+            </div>
+            <div class="slds-col slds-size_6-of-12">
+                <lightning-input name ='StuCity' value ={StuCity} label='City' onchange={handleOnChange}></lightning-input>
+            </div>
+            <div>
+                <lightning-button type="brand" label="Submit" variant="brand" size="small" onclick={createStudentLwc}></lightning-button>
+            </div>
+
+
+        </div>
+    </lightning-card>
+    
+</template>

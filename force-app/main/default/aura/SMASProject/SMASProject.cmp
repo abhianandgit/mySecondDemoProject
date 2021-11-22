@@ -1,0 +1,20 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <lightning:card class="slds-text-align_center" title="Target VS Actual Wireframe">
+        <aura:set attribute="actions">
+            <div class="slds-p-around_medium container lgc-bg">
+            <lightning:button iconName="utility:edit" iconPosition="right" variant="brand" label="Financial Year"/>
+            <lightning:buttonMenu alternativeText="Show menu">
+                <lightning:menuItem value="2021-22" label="2021-22" />
+                <lightning:menuItem value="2020-21" label="2020-21" />
+                <lightning:menuItem value="2019-20" label="2019-20" />
+            </lightning:buttonMenu>
+        </div>
+        </aura:set>
+        <p class="slds-p-horizontal_small">
+            Card Body (custom component)
+        </p>
+        <aura:set attribute="footer">
+            <lightning:button class="slds-align_absolute-center" variant="brand" label="Save"/>
+        </aura:set>
+    </lightning:card>
+</aura:component>

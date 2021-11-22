@@ -1,0 +1,45 @@
+<aura:component controller="LeadConversionAuraController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <!-- 2.handler to call method "doInit" of jsCOntroller on loading of component. -->
+    <aura:handler name="init" value="{!this}" action="{!c.leadwithcheckbox}"/>
+    <!-- 1.attribute to store return value and show on component. -->
+    <aura:attribute name="leadWrapper" type="LeadConversionAuraController.LeadConversionAuraController[]" />
+    <br/><div class="slds-grid">
+    <div class="slds-col slds-size--6-of-6">
+        <center><ui:button class="detilbuton" label="Convert Lead" press="{!c.convertLead}"/></center>
+    </div>
+    </div><br/>
+    <div class="slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-1">
+        <div class="table-responsive">
+            <table id="tableI" class="slds-table slds-table--bordered table" >
+                <!-- Table header -->
+                <thead>
+                    <tr class="slds-text-title--caps header">
+                        <td width="100"> Select </td>
+                        <td> Name </td>
+                        <td> Company </td>
+                        <td> Email  </td>
+                        <td> Phone </td>
+                        <td> Status</td>
+                    </tr>
+                </thead>
+                <!-- Table body -->
+                <tbody>
+                    <aura:iteration items="{!v.leadWrapper}" var="item">
+                        <tr>
+                            <td>
+                                <div class="checkbox">
+                                    <ui:inputCheckbox aura:id="checkbox" value="{!item.isBoolean}"/>
+                                </div>
+                            </td>
+                            <td>{!item.leadObj.Name}</td>
+                            <td>{!item.leadObj.Company}</td>
+                            <td>{!item.leadObj.Email}</td>
+                            <td>{!item.leadObj.Phone}</td>
+                            <td>{!item.leadObj.Status}</td>
+                        </tr>
+                    </aura:iteration>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</aura:component>

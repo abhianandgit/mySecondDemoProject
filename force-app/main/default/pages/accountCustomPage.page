@@ -1,0 +1,35 @@
+<apex:page setup="false" sidebar="true" tabStyle="Account" standardController="Account" >
+<apex:sectionHeader title="Account Edit" subtitle="New Account"/>
+<apex:form >
+<apex:pageBlock title="Account Edit">
+<apex:pageBlockButtons >
+<apex:commandButton value="Save" action="{!Save}" />
+<apex:commandButton value="Save&New" />
+<apex:commandButton value="Cancel" />
+</apex:pageBlockButtons>
+<apex:pageBlockSection title="Account Information" collapsible="true">
+<apex:outputField value="{!Account.ownerId}"/>
+<apex:inputField value="{!Account.Name}"/>
+<apex:inputField value="{!Account.ParentId}"/>
+<apex:inputField value="{!Account.Rating}"/>
+<apex:inputField value="{!Account.Phone}"/>
+<apex:inputField value="{!Account.Site}"/>
+<apex:inputField value="{!Account.Field_Update__c}"/>
+</apex:pageBlockSection>
+<apex:pageBlockSection title="Address Information" Collapsible="true">
+<apex:inputfield value="{!Account.BillingStreet}"/>
+<apex:inputField value="{! Account.BillingStreet}"/>
+<apex:inputField value="{! Account.BillingCity}"/>
+<apex:inputField value="{! Account.ShippingStreet}"/>
+<apex:inputField value="{! Account.ShippingCity}"/>
+</apex:pageBlockSection>
+<apex:pageBlockSection title="Address Information">
+<apex:inputfield value="{!Account.CustomerPriority__c}"/>
+</apex:pageBlockSection>
+<apex:pageBlockSection title="Description Information">
+<apex:inputfield value="{!Account.Description}"/>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+  
+</apex:page>

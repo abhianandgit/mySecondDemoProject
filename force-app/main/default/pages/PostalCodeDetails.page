@@ -1,0 +1,31 @@
+<apex:page setup="true" controller="PostalCodeDetails">
+<apex:sectionHeader title="Postal Code Details"/>
+    <apex:form >
+        
+        <apex:pageBlock title="Postal Branches Block">
+            <apex:pageBlockSection collapsible="true" columns="2">
+                <apex:inputText label="Enter Pin code" value="{!postalPinCode}"/>
+                <apex:CommandButton value="Search Branches" action="{!searchPostalBranch}" rerender="pgBlock"/>                
+             </apex:pageBlockSection>      
+        </apex:pageBlock>
+        <!--apex:repeat value="{!lstBranches}" var="pb">
+            {!pb.Message}
+        </apex:repeat-->
+        
+        <apex:pageBlock title="Postal Branches: {!lstBranches.Message}" id="pgBlock">
+            
+            <apex:pageblockTable value="{!lstBranches.PostOffice}" var="pb">
+                <apex:column value="{!pb.Name}" headerValue="Name"/>
+            	<apex:column value="{!pb.BranchType}" headerValue="BranchType"/>
+                <apex:column value="{!pb.DeliveryStatus}" headerValue="DeliveryStatus"/>
+                <apex:column value="{!pb.Circle}" headerValue="Circle"/>
+                <apex:column value="{!pb.District}" headerValue="District"/>
+                <apex:column value="{!pb.Division}" headerValue="Division"/>
+                <apex:column value="{!pb.Region}" headerValue="Region"/>
+                <apex:column value="{!pb.State}" headerValue="State"/>
+                <apex:column value="{!pb.Country}" headerValue="Country"/>
+            </apex:pageblockTable>
+        </apex:pageBlock>   
+           
+    </apex:form>
+</apex:page>

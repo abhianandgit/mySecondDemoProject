@@ -1,0 +1,10 @@
+<template>
+  <lightning-card title="iterator">
+      <template iterator:it={student}>        
+          <div key={it.name}>              
+                Student Name :{it.name}<br/>
+              Student Age :{it.age}<br/>
+          </div>
+      </template>
+  </lightning-card>  
+</template>

@@ -1,0 +1,15 @@
+<apex:page controller="unconvertedLeadController" setup="false" showHeader="true" >
+  <apex:sectionHeader title="unconvertedLeads"/>
+  <apex:form >
+  <apex:pageBlock title="leadslist, size of leads:{!ldlst.size}">
+  <apex:pageBlockSection title="leadinformations">
+  <apex:pageBlockTable value="{!ldlst}" var="ldst">
+  <apex:column value="{!ldst.id}"/>
+  <apex:column value="{!ldst.Name}"/>
+  <apex:column value="{!ldst.Phone}"/>
+  <apex:column value="{!ldst.Rating}"/>
+  </apex:pageBlockTable>
+  </apex:pageBlockSection>
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

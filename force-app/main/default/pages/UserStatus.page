@@ -1,0 +1,18 @@
+<apex:page >
+    <apex:pageBlock title="UserStatus">
+        <apex:pageBlockSection >
+            {! $User.FirstName & ' ' & $User.LastName &' '& $user.username }
+            <p>today's date is {!Today()} </p> 
+            <p>next week date is {!Today()+7}</p>
+            <p>{!if (contains('salesforce.com','force.com'	),'yes', 'nope')}</p>
+            <p>
+                {!if (day(today())>15, 'after the half month', 'before the half month')}
+            </p>
+            
+            <p>
+                {!if($user.isActive,$user.username,'inactive')}
+            </p>
+        </apex:pageBlockSection>
+        
+    </apex:pageBlock>
+</apex:page>

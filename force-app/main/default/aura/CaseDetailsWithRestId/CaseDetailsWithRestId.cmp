@@ -1,0 +1,32 @@
+<aura:component controller='FetchCaseWithRestId' implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <!--aura:attribute name='RestId' type='String' /-->
+    <aura:attribute name='CaseList' type='List' />
+    <!--aura:attribute name="recordId" type="String"/-->
+    <!--aura:attribute name='caseId' type='id' /-->
+    
+    <aura:handler name='init' value='{!this}' action='{!c.doInit}'/>
+    
+    <lightning:card title = 'Case Details'>
+    	<table class="slds-table slds-table_bordered slds-table_striped slds-table_cell-buffer slds-table_fixed-layout">
+		<thead>
+		<tr class="slds-text-heading_label">
+ 
+		<th scope="col"><div class="slds-truncate" >Case Number</div></th>
+		<th scope="col"><div class="slds-truncate" >Subject</div></th>
+        </tr>
+        </thead>
+        <tbody>
+
+		<aura:iteration items="{!v.CaseList}" var="cs">
+		<tr>
+ 
+        <td><div class="slds-truncate" >{!cs.CaseNumber}</div></td>
+        <td><div class="slds-truncate" >{!cs.Subject}</div></td>
+        </tr>
+        </aura:iteration>
+        </tbody>
+        </table>
+        
+	         	
+</lightning:card>		
+</aura:component>

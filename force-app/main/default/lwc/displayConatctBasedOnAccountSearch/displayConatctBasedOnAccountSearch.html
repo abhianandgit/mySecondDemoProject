@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title='Display Contact Based On Account Search'>
+        <lightning-input label='Give Account Name' onchange={handleOnChnge}></lightning-input>
+        <lightning-button label ='Search' onclick={handleOnSearchButton}></lightning-button>
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Account Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each ={ConRecords} for:item ='con'>
+                    <tr key = {con.id}>
+                        <td>{con.FirstName}</td>
+                        <td>{con.LastName}</td>
+                        <td>{con.Phone}</td>
+                        <td>{con.Email}</td>
+                        <td>{con.Account.Name}</td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </lightning-card>
+    
+</template>

@@ -1,0 +1,13 @@
+<apex:page Controller="SelectOptionalExample"  >
+    <apex:form id="re">
+        <apex:pageblock title="SelectOptionExample">                   
+     <apex:pageBlockSection title="Select language section">         
+         <apex:selectList size="1" Value="{!selected}" >
+             <apex:selectOptions value="{!option}"/>        
+        </apex:selectList>
+         <apex:commandbutton value="Select" action="{!call}"  reRender="re"/>
+         {!result}
+        </apex:pageBlockSection>            
+            </apex:pageblock>
+    </apex:form>    
+</apex:page>

@@ -1,0 +1,19 @@
+<apex:page controller="accountRecordExample">
+  <apex:form >
+      <apex:pageBlock title="this is account details">
+      <apex:pageBlockSection title="Hello" >
+      <apex:pageBlockTable value="{!acc}" var="x">
+      <apex:column HeaderValue="AccountName"> 
+      <apex:outputField value="{!x.Name}"/>  
+      </apex:column>
+      <apex:column HeaderValue="AccountPhone"> 
+      <apex:outputField value="{!x.phone}"/>  
+      </apex:column>
+      
+      
+      
+      </apex:pageBlockTable>
+      </apex:pageBlockSection>
+      </apex:pageBlock>
+  </apex:form>
+</apex:page>

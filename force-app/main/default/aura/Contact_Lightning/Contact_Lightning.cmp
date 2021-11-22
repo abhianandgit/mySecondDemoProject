@@ -1,0 +1,1 @@
+<aura:component access="global" implements="force:lightningQuickActionWithoutHeader,force:hasRecordId"><awsqualitysms:Send_SMS recId="{!v.recordId}" parentObjectname="Contact" /></aura:component>

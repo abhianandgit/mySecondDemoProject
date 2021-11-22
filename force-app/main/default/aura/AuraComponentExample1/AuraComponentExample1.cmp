@@ -1,0 +1,22 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute name="empName" type="string"></aura:attribute>
+    <aura:attribute name="principal" type="integer"></aura:attribute>
+    <aura:attribute name="rate" type="decimal"></aura:attribute>
+    <aura:attribute name="years" type="decimal"></aura:attribute>
+    <aura:attribute name="interest" type="decimal"></aura:attribute>
+    <lightning:card title="Interest Calculator">
+    Employee Name:{!v.empName} <br/>
+    Principal:{!v.principal}<br/>
+    Rate:{!v.rate}<br/>
+    Years:{!v.years}<br/>
+    Interest Calculated:{!v.interest}
+    
+    <aura:set attribute="actions">
+    	<lightning:buttonGroup>
+        <lightning:button label="Refresh" />
+        </lightning:buttonGroup>
+    </aura:set>
+        </lightning:card>
+    <aura:handler name="init" value="{!this}" action="{!c.doCalculation}"></aura:handler>
+
+    </aura:component>
